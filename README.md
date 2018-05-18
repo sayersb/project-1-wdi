@@ -25,7 +25,7 @@ playerOneChoice = [];
 playerTwoChoice = [];
 let counter = 0;
 let score = 0;
-
+showCount
 
 
 
@@ -40,17 +40,28 @@ function newGame(){
 clearGame - make game clear to start again after each round
 
 function clearGame(){
- counter = 
+ counter = 0;
+ nextlevel()
 }
 
 restartGame - after 2 wins for either player restart whole process
 
 computerMoves - need to log for comparisons, need setIntervals to show slowly
-
+computerMoves function(){
+  need way to light up cell thats being lit up
+then light needs to go off
+}
 
 playerOneMoves - record player clicks after each round of computerMoves
 
 compareComputerPlayer1 - to check if another computer moves needed
+
+next level
+next level function(){
+  counter++
+  setTimeout
+  computerMoves
+}
 
 playerTwoMoves
 
@@ -59,6 +70,10 @@ compareComputerPlayer2
 comparePlayersResults
 
 scoreCount
+
+restartPlayer
+player=[]
+
 
 hardMode - instead of adding 1 square at a time it adds 3...
 
