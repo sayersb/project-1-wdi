@@ -33,13 +33,22 @@ let score = 0;
 
 newGame
 
-clearGame
+function newGame(){
+  return clearGame();
+}
 
-restartGame
+clearGame - make game clear to start again after each round
+
+function clearGame(){
+ counter = 
+}
+
+restartGame - after 2 wins for either player restart whole process
 
 computerMoves - need to log for comparisons, need setIntervals to show slowly
 
-playerOneMoves
+
+playerOneMoves - record player clicks after each round of computerMoves
 
 compareComputerPlayer1 - to check if another computer moves needed
 

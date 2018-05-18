@@ -7,7 +7,7 @@ body {
 #board {
   width: 492px;
   height: 492px;
-  background-color: blue;
+  background-color: lightBlue;
   border: 1px solid red; }
 
 #board div {
