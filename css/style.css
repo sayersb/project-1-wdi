@@ -19,4 +19,8 @@ body {
 h1 {
   color: brown; }
 
+#start {
+  background-color: brown;
+  color: peachPuff; }
+
 /*# sourceMappingURL=style.css.map */

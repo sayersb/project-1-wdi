@@ -53,6 +53,9 @@ then light needs to go off
 }
 
 playerOneMoves - record player clicks after each round of computerMoves
+done with clicks
+checks after each click if it was right square somehow..
+can check if cell = array number in array for chosen first 7
 
 compareComputerPlayer1 - to check if another computer moves needed
 
@@ -64,6 +67,9 @@ next level function(){
 }
 
 playerTwoMoves
+user could have prompt to type answer of the cell e.g d4 or e2.. the one which had lit up
+could give them animation or hover etc for 3 seconds and put labels on columns for users
+could match the square results to the array results for first 7
 
 compareComputerPlayer2
 
@@ -71,11 +77,15 @@ comparePlayersResults
 
 scoreCount
 
+sound - might not need as function if just play when page loads/player pushes go
+
 restartPlayer
 player=[]
 
 
 hardMode - instead of adding 1 square at a time it adds 3...
+get to round 7 for super hard mode - no more chosen arrays so just have to guess which square the computer added last as was random...
+
 
 ...to make harder could add in timer, timerStop and timerReset
 

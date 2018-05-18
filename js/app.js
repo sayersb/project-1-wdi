@@ -16,6 +16,7 @@ const sequence = [
   [3, 5]
 ];
 
+
 const computerChoice = [];
 const playerOneChoice = [];
 const playerTwoChoice = [];
