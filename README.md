@@ -1,6 +1,6 @@
 # project-1-wdi
 
-<!-- //Instructions
+//Instructions
 music in background
 Computer shows a pattern of lit up squares
 Player 1 needs to replicate the pattern
@@ -12,7 +12,8 @@ Computer pattern to light up squares again, better if its random generator again
 Player 2 keeps answering until incorrect
 When player 2 loses need to pop up again with big LOSER
 Display who won, then offer to play again and restart. Score logged to scoreboard or lives go down by 1
-If draw say you're both losers, try again for a winner.. -->
+If draw say you're both losers, try again for a winner..
+//
 
 
 
