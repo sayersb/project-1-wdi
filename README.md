@@ -35,6 +35,7 @@ newGame
 
 function newGame(){
   return clearGame();
+  showScore
 }
 
 clearGame - make game clear to start again after each round
@@ -42,6 +43,7 @@ clearGame - make game clear to start again after each round
 function clearGame(){
  counter = 0;
  nextlevel()
+ showScore
 }
 
 restartGame - after 2 wins for either player restart whole process
@@ -75,6 +77,9 @@ compareComputerPlayer2
 
 comparePlayersResults
 
+checkLose
+player doesn't put in correct box
+
 scoreCount
 
 sound - might not need as function if just play when page loads/player pushes go
@@ -85,6 +90,7 @@ player=[]
 
 hardMode - instead of adding 1 square at a time it adds 3...
 get to round 7 for super hard mode - no more chosen arrays so just have to guess which square the computer added last as was random...
+play django unchained
 
 
 ...to make harder could add in timer, timerStop and timerReset
