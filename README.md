@@ -16,7 +16,7 @@ If draw say you're both losers, try again for a winner..
 
 //HTML
 button to restart game put in corner
-instructions on the screen on side of grid 
+instructions on the screen on side of grid
 
 //VARIABLES
 
@@ -28,7 +28,7 @@ playerTwoChoice = [];
 let counter = 0;
 let score = 0;
 showCount
-
+let level = 0
 
 
 //FUNCTIONS I NEED
@@ -49,12 +49,17 @@ function clearGame(){
 }
 
 restartGame - after 2 wins for either player restart whole process
+also button
 
 computerMoves - need to log for comparisons, need setIntervals to show slowly
 computerMoves function(){
   need way to light up cell thats being lit up
 then light needs to go off
 }
+function computerMoves(){
+  sequence.push([(Math.floor(Math.random() * 5)), (Math.floor(Math.random() * 5))]);
+}
+
 
 playerOneMoves - record player clicks after each round of computerMoves
 done with clicks
@@ -88,6 +93,22 @@ sound - might not need as function if just play when page loads/player pushes go
 
 restartPlayer
 player=[]
+
+animateBox
+to light up cells
+$("div").click(function() {
+   $(this).fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+});
+
+.path {
+  animation: changeColour 4s;
+}
+
+@keyframes changeColour {
+  0% { background-color: peachPuff;}
+  50% { background-color: grey;}
+  100% { background-color: peachPuff;}
+}
 
 
 hardMode - instead of adding 1 square at a time it adds 3...

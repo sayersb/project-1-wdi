@@ -30,6 +30,7 @@ let score = 0;
 $(()=>{
 
   const $button = $('#start');
+  const $restart = $('#restart');
 
 // BOARD
   $('#board').on('mouseover', 'div', function(){
@@ -44,6 +45,7 @@ $(()=>{
       } else if(cell === 1){
         $element.addClass('path');
       }
+      //could add numbers 1  - 7 to relate to boxes to light up then call the class each time??..
 
       $element.data({x: i, y: j});   // shows the cell you're in with few lines below
 
@@ -69,6 +71,13 @@ $(()=>{
     console.log(sequence);
   });
 
+  // restart button
+  // $restart.on('click', () => {
+  //   level = 0;
+  //   counter = 0;
+  //   clearGame();
+  // restartGame();
+  // });
 
 
 
