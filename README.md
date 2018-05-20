@@ -14,7 +14,9 @@ When player 2 loses need to pop up again with big LOSER...
 Display who won, then offer to play again and restart. Score logged to scoreboard or lives go down by 1...
 If draw say you're both losers, try again for a winner..
 
-//
+//HTML
+button to restart game put in corner
+instructions on the screen on side of grid 
 
 //VARIABLES
 
