@@ -2,11 +2,11 @@ console.log('hello');
 
 const grid = [
   [0,0,1,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0]
+  [0,1,0,0,0,0],
+  [0,0,0,0,1,0],
+  [0,0,0,1,0,0],
+  [0,0,0,0,0,1],
+  [0,0,0,0,1,0]
 ];
 
 const sequence = [
@@ -32,13 +32,15 @@ $(()=>{
   const $button = $('#start');
   const $restart = $('#restart');
 
-  const testDiv = $(''); // need getter for the cell
+  let testDiv = $('#board div').filter(function() {
+    return $(this).data().x === 0 && $(this).data().y === 2;
+  }).addClass('computerChoices');
   console.log(testDiv);
 
   // BOARD
   $('#board').on('click', 'div', function(e){
     console.log($('#cell-address').val(`${$(this).data('x')}-${$(this).data('y')}`));  //shows cell we're hovering over on browser page
-     e.target.classList.add('userChoices');
+    e.target.classList.add('userChoices');
   });
 
   $.each(grid, (i, row)=>{

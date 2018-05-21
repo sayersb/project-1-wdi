@@ -51,5 +51,18 @@ h1 {
     background-color: peachPuff; }
   100% {
     background-color: grey; } }
+.path {
+  animation: path 1s;
+  animation-delay: 3s; }
+
+@keyframes path {
+  0% {
+    background-color: peachPuff; }
+  50% {
+    background-color: grey; }
+  75% {
+    background-color: peachPuff; }
+  100% {
+    background-color: grey; } }
 
 /*# sourceMappingURL=style.css.map */
