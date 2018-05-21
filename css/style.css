@@ -27,4 +27,29 @@ h1 {
   background-color: brown;
   color: peachPuff; }
 
+.computerChoices {
+  animation: computerChoices 1s; }
+
+@keyframes computerChoices {
+  0% {
+    background-color: peachPuff; }
+  50% {
+    background-color: grey; }
+  75% {
+    background-color: peachPuff; }
+  100% {
+    background-color: grey; } }
+.userChoices {
+  animation: userChoices 1s; }
+
+@keyframes userChoices {
+  0% {
+    background-color: peachPuff; }
+  50% {
+    background-color: grey; }
+  75% {
+    background-color: peachPuff; }
+  100% {
+    background-color: grey; } }
+
 /*# sourceMappingURL=style.css.map */

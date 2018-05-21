@@ -26,7 +26,6 @@ computerChoice = [];
 playerOneChoice = [];
 playerTwoChoice = [];
 let counter = 0;
-let score = 0;
 showCount
 let level = 0
 
@@ -37,7 +36,7 @@ newGame
 
 function newGame(){
   return clearGame();
-  showScore
+  level();
 }
 
 clearGame - make game clear to start again after each round
@@ -100,7 +99,7 @@ $("div").click(function() {
    $(this).fadeTo('slow', 0.5).fadeTo('slow', 1.0);
 });
 
-.path {
+#path {
   animation: changeColour 4s;
 }
 
