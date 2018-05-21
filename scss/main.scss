@@ -23,6 +23,10 @@ h1{
   color:brown;
 }
 
+h3{
+  color:brown;
+}
+
 #start{
   background-color:brown;
   color:peachPuff;
@@ -35,6 +39,7 @@ h1{
 
 .computerChoices {
   animation: computerChoices 1s;
+  animation-delay: 1s;
 }
 
 @keyframes computerChoices {
