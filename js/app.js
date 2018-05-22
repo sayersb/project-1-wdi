@@ -40,6 +40,9 @@ $(()=>{
     e.target.classList.add('userChoices');
     clickCount++;
     console.log(clickCount);
+    setTimeout(function(){
+      e.target.classList.remove('userChoices');
+    }, 2000 );
     if(clickCount>sequence.length){
       alert('YOU LOSE LOSER');
     }
@@ -84,7 +87,6 @@ $(()=>{
 
   function resetDivs() {
     $('div').removeClass('computerChoices');
-
   }
 
 
