@@ -18,10 +18,11 @@ const sequence = [
   [5, 4]
 ];
 
+const userChoice = [];
+
 
 const computerChoice = [];
-const playerOneChoice = [];
-const playerTwoChoice = [];
+const playerChoice = [];
 let counter = 0;
 let score = 0;
 let clickCount = 0;
@@ -31,23 +32,29 @@ $(()=>{
 
   const $button = $('#start');
   const $restart = $('#restart');
-  const $score = ('#levelScreen');
+  const $score = $('#levelScreen');
 
 
-  // BOARD
+  // USER CLICKS IN BOXES TO SELECT / LIGHT UP
   $('#board').on('click', 'div', function(e){
     // console.log($('#cell-address').val(`${$(this).data('x')}-${$(this).data('y')}`));  //shows cell we're hovering over on browser page
     e.target.classList.add('userChoices');
+    playerChoice.push([$(this).data('x'), $(this).data('y')]);
+    console.log(playerChoice);
     clickCount++;
-    console.log(clickCount);
+    // console.log(clickCount);
     setTimeout(function(){
       e.target.classList.remove('userChoices');
     }, 2000 );
-    if(clickCount>sequence.length){
+    if(clickCount === sequence.length){
+      //check playchoice array exactly equals sequence
+      //if it does, add another random location to sequence and run sequence again
       alert('YOU LOSE LOSER');
     }
   });
 
+
+  // BOARD SET UP
   $.each(grid, (i, row)=>{
     $.each(row, (j, cell)=>{
       const $element = $('<div />');
@@ -56,7 +63,6 @@ $(()=>{
       } else if(cell === 1){
         $element.addClass('path');
       }
-      //could add numbers 1  - 7 to relate to boxes to light up then call the class each time??..
 
       $element.data({x: i, y: j});   // shows the cell you're in with few lines below
 
@@ -69,12 +75,8 @@ $(()=>{
     });
   });
 
-  // let testDiv = $('#board div').filter(function() {
-  //   return $(this).data().x === 0 && $(this).data().y === 2;
-  // }).addClass('computerChoices');
-  // console.log(testDiv);
 
-
+  //Computer Moves, implemented after start button clicked
   function computerMoves(){
     sequence.push([(Math.floor(Math.random() * 5)), (Math.floor(Math.random() * 5))]);
   }
@@ -85,12 +87,30 @@ $(()=>{
   //need to check boxes clicked match sequence }
 
 
+  function userClick(){
+
+  //checkWin();
+  }
+
+
+  function checkWin(){
+    if($(this).data({x: 0, y: 2} && {x: 2, y: 4} && {x: 1, y: 1} && {x: 4, y: 5} && {x: 3, y: 3} && {x: 5, y: 4})){
+      alert('Woop Woop onto the next level');
+      //  user clicked the wrong color (end the game)
+      //  user entered the right color, but is not finished with the sequence (do nothing)
+      // user entered the right color and just completed the sequence (start a new round)
+    }
+  }
+  checkWin();
+
+
+
+
   function resetDivs() {
     $('div').removeClass('computerChoices');
   }
 
 
-  //
   // START BUTTON
   $button.on('click', () => {
     computerMoves();
@@ -107,9 +127,7 @@ $(()=>{
     });
 
 
-    // $( '#path').each(function(){
-    //   $( this).animate();
-    // });
+
   });
 
 
@@ -126,7 +144,15 @@ $(()=>{
 
   // restart button
   // $restart.on('click', () => {
-  //   level = 0;
+  //   level = 1;
+  //   sequence = [
+  //   [0, 2],
+  //   [2, 4],
+  //   [1, 1],
+  //   [4, 5],
+  //   [3, 3],
+  //   [5, 4]
+  // ];
   //   clearGame();
   // restartGame();
   // });
