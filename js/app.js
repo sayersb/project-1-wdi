@@ -40,6 +40,9 @@ $(()=>{
     e.target.classList.add('userChoices');
     clickCount++;
     console.log(clickCount);
+    if(clickCount>sequence.length){
+      alert('YOU LOSE LOSER');
+    }
   });
 
   $.each(grid, (i, row)=>{
@@ -76,10 +79,13 @@ $(()=>{
   // function userMoves(){
   //   for( var i = 0; i < sequence.length; i++){}
   //   if(userChoices)
-      //need to check boxes clicked match sequence }
+  //need to check boxes clicked match sequence }
 
 
+  function resetDivs() {
+    $('div').removeClass('computerChoices');
 
+  }
 
 
   //
@@ -87,15 +93,15 @@ $(()=>{
   $button.on('click', () => {
     computerMoves();
     console.log(sequence);
-    sequence.forEach((cell, i) => {
-
-      $('#board div').filter(function() {
-        return $(this).data().x === sequence[i][0] && $(this).data().y === sequence[i][1];
-      }).addClass('computerChoices');
-      // console.log(`We've just hit loop ${i}`);
-      // setTimeout(function(){
-      //   console.log(`We've just hit timeout ${i}`);
-      // }, 1000 * i);
+    sequence.forEach((cell, i, array) => {
+      const finalIndex = (array.length - 1) * 1200;
+      setTimeout(function(){
+        $('#board div').filter(function() {
+          return $(this).data().x === sequence[i][0] && $(this).data().y === sequence[i][1];
+        }).addClass('computerChoices');
+        console.log(`We've just hit timeout ${i}`);
+      }, 1000 * i);
+      setTimeout(resetDivs, finalIndex);
     });
 
 
