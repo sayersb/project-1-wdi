@@ -47,9 +47,13 @@ $(()=>{
       e.target.classList.remove('userChoices');
     }, 2000 );
     if(clickCount === sequence.length){
+      if(JSON.stringify(sequence) == JSON.stringify(playerChoice)){
+        alert('winner winner chicken dinner');
+      }
       //check playchoice array exactly equals sequence
       //if it does, add another random location to sequence and run sequence again
-      alert('YOU LOSE LOSER');
+      { alert('YOU LOSE LOSER');
+      }
     }
   });
 
@@ -92,16 +96,16 @@ $(()=>{
   //checkWin();
   }
 
-
-  function checkWin(){
-    if($(this).data({x: 0, y: 2} && {x: 2, y: 4} && {x: 1, y: 1} && {x: 4, y: 5} && {x: 3, y: 3} && {x: 5, y: 4})){
-      alert('Woop Woop onto the next level');
-      //  user clicked the wrong color (end the game)
-      //  user entered the right color, but is not finished with the sequence (do nothing)
-      // user entered the right color and just completed the sequence (start a new round)
-    }
-  }
-  checkWin();
+  //
+  // function checkWin(){
+  //   if($(this).data({x: 0, y: 2} && {x: 2, y: 4} && {x: 1, y: 1} && {x: 4, y: 5} && {x: 3, y: 3} && {x: 5, y: 4})){
+  //     alert('Woop Woop onto the next level');
+  //     //  user clicked the wrong color (end the game)
+  //     //  user entered the right color, but is not finished with the sequence (do nothing)
+  //     // user entered the right color and just completed the sequence (start a new round)
+  //   }
+  // }
+  // checkWin();
 
 
 
