@@ -68,8 +68,9 @@ can check if cell = array number in array for chosen first 7
 compareComputerPlayer1 - to check if another computer moves needed
 
 next level
-next level function(){
-  counter++
+function nextLevel(){
+  checkifuserinput was correct
+  score ++
   setTimeout
   computerMoves
 }
@@ -114,6 +115,11 @@ hardMode - instead of adding 1 square at a time it adds 3...
 get to round 7 for super hard mode - no more chosen arrays so just have to guess which square the computer added last as was random...
 play django unchained
 
+
+//setTimeout
+setTimeout(function() {
+  $()
+  }, 1500);
 
 ...to make harder could add in timer, timerStop and timerReset
 
