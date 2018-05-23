@@ -31,6 +31,9 @@ $(()=>{
   const $restart = $('#restart');
   const $score = $('#levelScreen');
 
+  const audio =  document.querySelector('#audio');
+  audio.src = './sounds/theChain.mp3';
+  audio.play();
 
   // USER CLICKS IN BOXES TO SELECT / LIGHT UP
   $('#board').on('click', 'div', function(e){
