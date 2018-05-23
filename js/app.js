@@ -9,18 +9,15 @@ const grid = [
   [0,0,0,0,0,0]
 ];
 
-const sequence = [
+let sequence = [
   [0, 2],
   [2, 4],
   [1, 1]
 ];
 
-const userChoice = [];
-
 
 const computerChoice = [];
-const playerChoice = [];
-let counter = 0;
+let playerChoice = [];
 let score = 0;
 let clickCount = 0;
 
@@ -29,7 +26,7 @@ $(()=>{
 
   const $button = $('#start');
   const $restart = $('#restart');
-  const $score = $('#levelScreen');
+  let score = $('#levelScreen');
 
   const audio =  document.querySelector('#audio');
   audio.src = './sounds/theChain.mp3';
@@ -38,9 +35,9 @@ $(()=>{
   const songs =  document.querySelector('#songs');
 
 
-
   // USER CLICKS IN BOXES TO SELECT / LIGHT UP
   $('#board').on('click', 'div', function(e){
+    console.log(clickCount, sequence);
     // console.log($('#cell-address').val(`${$(this).data('x')}-${$(this).data('y')}`));  //shows cell we're hovering over on browser page
     e.target.classList.add('userChoices');
     playerChoice.push([$(this).data('x'), $(this).data('y')]);
@@ -51,9 +48,12 @@ $(()=>{
       e.target.classList.remove('userChoices');
     }, 2000 );
     if(clickCount === sequence.length){
-      if(JSON.stringify(sequence) === JSON.stringify(playerChoice)){
+      if(JSON.stringify(sequence) == JSON.stringify(playerChoice)){
         score++;
         alert('winner winner chicken dinner');
+        clickCount = 0;
+        playerChoice = [];
+        computerMoves();
       } else {
         alert('YOU LOSE LOSER');
       }
@@ -77,7 +77,6 @@ $(()=>{
       $element.on('click', function(){
         console.log($(this).data());
         const $element = $(this);
-
       });
       $element.appendTo('#board');
     });
@@ -104,7 +103,7 @@ $(()=>{
 
   // START BUTTON
   $button.on('click', () => {
-    computerMoves();
+
     console.log(sequence);
     sequence.forEach((cell, i, array) => {
       const finalIndex = (array.length ) * 1200;
@@ -123,17 +122,15 @@ $(()=>{
     audio.play();
   });
 
-  // restart button
-  // $restart.on('click', () => {
-  //   level = 1;
-  //   sequence = [
-  //   [0, 2],
-  //   [2, 4],
-  //   [1, 1]
-  // ];
-  //   clearGame();
-  // restartGame();
-  // });
+
+  $restart.on('click', () => {
+    score = 1;
+    return sequence = [
+      [0, 2],
+      [2, 4],
+      [1, 1]
+    ];
+  });
 
 
 });
