@@ -35,6 +35,10 @@ $(()=>{
   audio.src = './sounds/theChain.mp3';
   audio.play();
 
+  const songs =  document.querySelector('#songs');
+
+
+
   // USER CLICKS IN BOXES TO SELECT / LIGHT UP
   $('#board').on('click', 'div', function(e){
     // console.log($('#cell-address').val(`${$(this).data('x')}-${$(this).data('y')}`));  //shows cell we're hovering over on browser page
@@ -85,20 +89,12 @@ $(()=>{
     sequence.push([(Math.floor(Math.random() * 5)), (Math.floor(Math.random() * 5))]);
   }
 
-  // function userMoves(){
-  //   for( var i = 0; i < sequence.length; i++){}
-  //   if(userChoices)
-  //need to check boxes clicked match sequence }
-
-
   // function checkWin(){
   //  user clicked the wrong color (end the game)
   //  user entered the right color, but is not finished with the sequence (do nothing)
   //  user entered the right color and just completed the sequence (start a new round)
   //   }
   // }
-  // checkWin();
-
 
 
   function resetDivs() {
@@ -111,7 +107,7 @@ $(()=>{
     computerMoves();
     console.log(sequence);
     sequence.forEach((cell, i, array) => {
-      const finalIndex = (array.length) * 1200;
+      const finalIndex = (array.length ) * 1200;
       setTimeout(function(){
         $('#board div').filter(function() {
           return $(this).data().x === sequence[i][0] && $(this).data().y === sequence[i][1];
@@ -122,7 +118,10 @@ $(()=>{
     });
   });
 
-
+  $('#songs').on('click', () => {
+    audio.src = './sounds/django.mp3';
+    audio.play();
+  });
 
   // restart button
   // $restart.on('click', () => {
@@ -135,7 +134,6 @@ $(()=>{
   //   clearGame();
   // restartGame();
   // });
-
 
 
 });
