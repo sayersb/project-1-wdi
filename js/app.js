@@ -50,7 +50,7 @@ $(()=>{
     if(clickCount === sequence.length){
       if(JSON.stringify(sequence) == JSON.stringify(playerChoice)){
         score++;
-        alert('winner winner chicken dinner');
+        alert('WINNER WINNER CHICKEN DINNER');
         clickCount = 0;
         playerChoice = [];
         computerMoves();
@@ -123,13 +123,16 @@ $(()=>{
   });
 
 
+
+
   $restart.on('click', () => {
     score = 1;
-    return sequence = [
+    sequence = [
       [0, 2],
       [2, 4],
       [1, 1]
     ];
+    playerChoice = [];
   });
 
 
