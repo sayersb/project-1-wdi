@@ -3,6 +3,7 @@
 
 body{
   background-color:peachPuff;
+  text-align:center;
 }
 
 #board{
@@ -10,6 +11,7 @@ body{
   height:492px;
   background-color:lightBlue;
   border: 1px solid brown;
+  margin-left:20%;
 }
 
 #board div {
@@ -20,10 +22,15 @@ body{
 }
 
 h1{
+  text-align:center;
   color:brown;
 }
 
 h3{
+  color:brown;
+}
+
+p{
   color:brown;
 }
 

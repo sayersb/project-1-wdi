@@ -12,10 +12,7 @@ const grid = [
 const sequence = [
   [0, 2],
   [2, 4],
-  [1, 1],
-  [4, 5],
-  [3, 3],
-  [5, 4]
+  [1, 1]
 ];
 
 const userChoice = [];
@@ -91,22 +88,13 @@ $(()=>{
   //need to check boxes clicked match sequence }
 
 
-  function userClick(){
-
-  //checkWin();
-  }
-
-  //
   // function checkWin(){
-  //   if($(this).data({x: 0, y: 2} && {x: 2, y: 4} && {x: 1, y: 1} && {x: 4, y: 5} && {x: 3, y: 3} && {x: 5, y: 4})){
-  //     alert('Woop Woop onto the next level');
-  //     //  user clicked the wrong color (end the game)
-  //     //  user entered the right color, but is not finished with the sequence (do nothing)
-  //     // user entered the right color and just completed the sequence (start a new round)
+  //  user clicked the wrong color (end the game)
+  //  user entered the right color, but is not finished with the sequence (do nothing)
+  //  user entered the right color and just completed the sequence (start a new round)
   //   }
   // }
   // checkWin();
-
 
 
 
@@ -129,20 +117,7 @@ $(()=>{
       }, 1000 * i);
       setTimeout(resetDivs, finalIndex);
     });
-
-
-
   });
-
-
-
-
-  // sequence.forEach((cell, i) => {
-  //
-  //   $('#board div').filter(function() {
-  //     return $(this).data().x === sequence[i][0] && $(this).data().y === sequence[i][1];
-  //   }).addClass('computerChoices');
-  // });
 
 
 
@@ -152,10 +127,7 @@ $(()=>{
   //   sequence = [
   //   [0, 2],
   //   [2, 4],
-  //   [1, 1],
-  //   [4, 5],
-  //   [3, 3],
-  //   [5, 4]
+  //   [1, 1]
   // ];
   //   clearGame();
   // restartGame();

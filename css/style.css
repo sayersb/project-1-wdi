@@ -2,13 +2,15 @@ footer {
   color: brown; }
 
 body {
-  background-color: peachPuff; }
+  background-color: peachPuff;
+  text-align: center; }
 
 #board {
   width: 492px;
   height: 492px;
   background-color: lightBlue;
-  border: 1px solid brown; }
+  border: 1px solid brown;
+  margin-left: 20%; }
 
 #board div {
   border: 2px solid brown;
@@ -17,9 +19,13 @@ body {
   float: left; }
 
 h1 {
+  text-align: center;
   color: brown; }
 
 h3 {
+  color: brown; }
+
+p {
   color: brown; }
 
 #start {
