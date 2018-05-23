@@ -47,15 +47,15 @@ $(()=>{
       e.target.classList.remove('userChoices');
     }, 2000 );
     if(clickCount === sequence.length){
-      if(JSON.stringify(sequence) == JSON.stringify(playerChoice)){
+      if(JSON.stringify(sequence) === JSON.stringify(playerChoice)){
+        score++;
         alert('winner winner chicken dinner');
-      }
-      //check playchoice array exactly equals sequence
-      //if it does, add another random location to sequence and run sequence again
-      { alert('YOU LOSE LOSER');
+      } else {
+        alert('YOU LOSE LOSER');
       }
     }
   });
+  //if it does, add another random location to sequence and run sequence again
 
 
   // BOARD SET UP
