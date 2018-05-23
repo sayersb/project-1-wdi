@@ -111,7 +111,7 @@ $(()=>{
     computerMoves();
     console.log(sequence);
     sequence.forEach((cell, i, array) => {
-      const finalIndex = (array.length - 1) * 1200;
+      const finalIndex = (array.length) * 1200;
       setTimeout(function(){
         $('#board div').filter(function() {
           return $(this).data().x === sequence[i][0] && $(this).data().y === sequence[i][1];
