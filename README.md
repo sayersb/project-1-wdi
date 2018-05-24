@@ -1,6 +1,10 @@
 # project-1-wdi
 
 //Instructions
+
+After pressing the start button the computer will randomly generate a sequence of squares lighting up on the board. You have to remember the order of the pattern and then repeat it after the lights have turned off. If you're correct push the next level button to start the next computer sequence.
+
+
 music in background...
 Computer shows a pattern of lit up squares...
 Player 1 needs to replicate the pattern...

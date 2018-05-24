@@ -5,6 +5,9 @@ body {
   background-color: peachPuff;
   text-align: center; }
 
+#background {
+  background-image: url("../images/chain.png"); }
+
 #board {
   width: 492px;
   height: 492px;
@@ -73,19 +76,6 @@ p {
   animation: userChoices 1s; }
 
 @keyframes userChoices {
-  0% {
-    background-color: peachPuff; }
-  50% {
-    background-color: grey; }
-  75% {
-    background-color: peachPuff; }
-  100% {
-    background-color: grey; } }
-.path {
-  animation: path 1s;
-  animation-delay: 3s; }
-
-@keyframes path {
   0% {
     background-color: peachPuff; }
   50% {
