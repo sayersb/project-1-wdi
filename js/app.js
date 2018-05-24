@@ -20,7 +20,7 @@ const computerChoice = [];
 let playerChoice = [];
 let score  = 1;
 let clickCount = 0;
-
+let player = [];
 
 
 $(()=>{
@@ -30,6 +30,7 @@ $(()=>{
   // let score = $('#levelScreen');
   // $('levelScreen').innerHTML = score;
   document.getElementById('levelScreen').innerHTML = score;
+  document.getElementById('player').innerHTML = [];
 
   const audio =  document.querySelector('#audio');
   audio.src = './sounds/theChain.mp3';
@@ -58,10 +59,13 @@ $(()=>{
         score++;
         console.log(score);
         document.getElementById('levelScreen').innerHTML = score;
-        alert('WINNER WINNER CHICKEN DINNER');
+        document.getElementById('player').innerHTML = 'WINNER WINNER CHICKEN DINNER... Push the next level button to go again...';
+        // alert('WINNER WINNER CHICKEN DINNER');
         computerMoves();
       } else {
+        document.getElementById('levelScreen').innerHTML = 1;
         alert('YOU LOSE LOSER');
+
       }
     }
   });
@@ -109,7 +113,7 @@ $(()=>{
 
   // START BUTTON
   $button.on('click', () => {
-
+    document.getElementById('player').innerHTML = [];
     console.log(sequence);
     sequence.forEach((cell, i, array) => {
       const finalIndex = (array.length ) * 1200;
@@ -129,10 +133,10 @@ $(()=>{
   });
 
 
-
-
   $restart.on('click', () => {
-    score = 1;
+    document.getElementById('levelScreen').innerHTML = 1;
+    document.getElementById('player').innerHTML = [];
+    // score = 1;
     sequence = [
       [0, 2],
       [2, 4],
