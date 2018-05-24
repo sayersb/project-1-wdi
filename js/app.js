@@ -10,9 +10,7 @@ const grid = [
 ];
 
 let sequence = [
-  [0, 2],
-  [2, 4],
-  [1, 1]
+  [0, 2]
 ];
 
 
@@ -66,7 +64,7 @@ $(()=>{
         computerMoves();
       } else {
         document.getElementById('levelScreen').innerHTML = 1;
-        alert('YOU LOSE LOSER');
+        document.getElementById('player').innerHTML = 'YOU LOSE LOSER... Refresh the browser so your mate can have a go';
 
       }
     }
@@ -141,8 +139,6 @@ $(()=>{
     score = 1;
     sequence = [
       [0, 2],
-      [2, 4],
-      [1, 1]
     ];
     playerChoice = [];
   });

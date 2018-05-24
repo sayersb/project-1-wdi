@@ -16,7 +16,7 @@ body{
   height:492px;
   background-color:lightBlue;
   border: 1px solid brown;
-  margin-left:28%;
+  margin-left:33%;
 }
 
 #board div {
@@ -45,24 +45,27 @@ p{
 #start{
   background-color:brown;
   color:peachPuff;
+  border-radius:5px;
 }
 
 #songs{
   background-color:brown;
   color:peachPuff;
   border-radius:4px;
+  margin-right:5px;
 }
 
 #restart{
   background-color:brown;
   color:peachPuff;
   border-radius:4px;
+  margin-right:5px;
 }
 
 #unchained{
   background-color:brown;
   color:peachPuff;
-  font-size: 12px;
+  font-size: 11px;
   margin-right:5px;
   padding-left:3px;
   padding-right:3px;
@@ -78,9 +81,9 @@ p{
 
 @keyframes computerChoices {
   0% { background-color: peachPuff;}
-  50% { background-color: grey;}
+  50% { background-color: darkgrey;}
   75% { background-color: peachPuff;}
-  100% { background-color: grey;}
+  100% { background-color: darkgrey;}
 }
 
 .userChoices {
