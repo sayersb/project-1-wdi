@@ -64,7 +64,7 @@ $(()=>{
         computerMoves();
       } else {
         document.getElementById('levelScreen').innerHTML = 1;
-        document.getElementById('player').innerHTML = 'YOU LOSE LOSER... Refresh the browser so your mate can have a go';
+        document.getElementById('player').innerHTML = 'YOU LOSE LOSER... Refresh the browser so your mate can have a go.. try to remember your score';
 
       }
     }
