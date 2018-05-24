@@ -38,6 +38,8 @@ $(()=>{
 
   const songs =  document.querySelector('#songs');
 
+  const unchained = document.querySelector('#unchained');
+
 
   // USER CLICKS IN BOXES TO SELECT / LIGHT UP
   $('#board').on('click', 'div', function(e){
@@ -125,6 +127,12 @@ $(()=>{
     audio.src = './sounds/django.mp3';
     audio.play();
   });
+
+  $('#unchained').on('click', () => {
+    audio.src = './sounds/melody.mp3';
+    audio.play();
+  });
+
 
 //RESTART BUTTON
   $restart.on('click', () => {
