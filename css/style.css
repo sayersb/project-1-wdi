@@ -20,13 +20,16 @@ body {
 
 h1 {
   text-align: center;
-  color: brown; }
+  color: brown;
+  font-family: 'Yatra One', cursive; }
 
 h3 {
-  color: brown; }
+  color: brown;
+  font-family: 'Yatra One', cursive; }
 
 p {
-  color: brown; }
+  color: brown;
+  font-family: 'Yatra One', cursive; }
 
 #start {
   background-color: brown;

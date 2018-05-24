@@ -84,7 +84,7 @@ $(()=>{
 
       $element.data({x: i, y: j});   // shows the cell you're in with few lines below
 
-      $element.on('click', function(){
+      $element.on('click', function(){   //CONSOLE.LOG GRID SQUARE CLICKED IN
         console.log($(this).data());
         const $element = $(this);
       });
@@ -93,25 +93,18 @@ $(()=>{
   });
 
 
-  //Computer Moves, implemented after start button clicked
+  //Computer Moves, implemented after start/next level button clicked
   function computerMoves(){
     sequence.push([(Math.floor(Math.random() * 5)), (Math.floor(Math.random() * 5))]);
   }
 
-  // function checkWin(){
-  //  user clicked the wrong color (end the game)
-  //  user entered the right color, but is not finished with the sequence (do nothing)
-  //  user entered the right color and just completed the sequence (start a new round)
-  //   }
-  // }
-
-
+//REMOVE COMPUTER CHOICE OPTIONS AFTER LIGHTING UP
   function resetDivs() {
     $('div').removeClass('computerChoices');
   }
 
 
-  // START BUTTON
+  // START / NEXT LEVEL BUTTON
   $button.on('click', () => {
     document.getElementById('player').innerHTML = [];
     console.log(sequence);
@@ -127,16 +120,17 @@ $(()=>{
     });
   });
 
+//CHAINGE SONG BUTTON
   $('#songs').on('click', () => {
     audio.src = './sounds/django.mp3';
     audio.play();
   });
 
-
+//RESTART BUTTON
   $restart.on('click', () => {
     document.getElementById('levelScreen').innerHTML = 1;
     document.getElementById('player').innerHTML = [];
-    // score = 1;
+    score = 1;
     sequence = [
       [0, 2],
       [2, 4],
