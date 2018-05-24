@@ -18,15 +18,18 @@ let sequence = [
 
 const computerChoice = [];
 let playerChoice = [];
-let score = 0;
+let score  = 1;
 let clickCount = 0;
+
 
 
 $(()=>{
 
   const $button = $('#start');
   const $restart = $('#restart');
-  let score = $('#levelScreen');
+  // let score = $('#levelScreen');
+  // $('levelScreen').innerHTML = score;
+  document.getElementById('levelScreen').innerHTML = score;
 
   const audio =  document.querySelector('#audio');
   audio.src = './sounds/theChain.mp3';
@@ -49,10 +52,13 @@ $(()=>{
     }, 2000 );
     if(clickCount === sequence.length){
       if(JSON.stringify(sequence) == JSON.stringify(playerChoice)){
-        score++;
-        alert('WINNER WINNER CHICKEN DINNER');
+
         clickCount = 0;
         playerChoice = [];
+        score++;
+        console.log(score);
+        document.getElementById('levelScreen').innerHTML = score;
+        alert('WINNER WINNER CHICKEN DINNER');
         computerMoves();
       } else {
         alert('YOU LOSE LOSER');
