@@ -63,8 +63,10 @@ $(()=>{
         // alert('WINNER WINNER CHICKEN DINNER');
         computerMoves();
       } else {
+        clickCount = 0;
+        playerChoice =[];
         document.getElementById('levelScreen').innerHTML = 1;
-        document.getElementById('player').innerHTML = 'YOU LOSE LOSER... Refresh the browser so your mate can have a go.. try to remember your score';
+        document.getElementById('player').innerHTML = 'YOU LOSE LOSER... Give your mate a go.. try to remember your score';
 
       }
     }
