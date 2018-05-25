@@ -6,4 +6,4 @@ After pressing the start button the computer will randomly generate a sequence o
 When you lose don't forget to remember what level you reached & refresh the browser for your friend.
 
 
-<img src="/Users/bradleysayers/development/project-1-wdi/images/chain1.gif" width="80" height="80" />
+![alt text][/Users/bradleysayers/development/project-1-wdi/images/chain1.gif "Game Tutorial"]
