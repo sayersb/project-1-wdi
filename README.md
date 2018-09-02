@@ -47,3 +47,13 @@ Given a bit more time I would have added in a high score function that remembers
 I could also do my best to find more songs that I love with the word CHAIN in the song name... On the music note I could also implement a feature that stops all of the music and then makes different sounds very time the squares are lit up.
 Making the game more responsive, for mobile use etc would have been another feature added given more time.
 
+
+##  Other GA Project Repositories
+
+  * 2nd: [World Cup Predictor](https://github.com/sayersb/project-2-wdi)
+
+  * 3rd: [Hidden Gems App](https://github.com/sayersb/WDI34_PROJECT_3)
+
+  * 4th: [ABC Events App](https://github.com/sayersb/WDI-PROJECT-4)
+
+
